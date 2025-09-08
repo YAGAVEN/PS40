@@ -183,12 +183,15 @@ export const MapView: React.FC<MapViewProps> = ({
         </p>
       </div>
       <div className="relative">
-        <canvas
-          ref={canvasRef}
-          width={800}
-          height={600}
-          className="w-full h-auto cursor-pointer"
-          onClick={handleCanvasClick}
+        <iframe
+          width="100%"
+          height="600"
+          frameBorder="0"
+          scrolling="no"
+          marginHeight={0}
+          marginWidth={0}
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-180,-85,180,85&layer=mapnik"
+          title="OpenStreetMap World"
         />
         {selectedFloat && (
           <div className="absolute top-4 right-4 bg-black bg-opacity-80 text-white px-3 py-2 rounded-lg">
